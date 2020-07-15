@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="176dp"
+        android:layout_height="165dp"
+        android:layout_above="@+id/btnLogout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginBottom="39dp"
+        app:srcCompat="@drawable/ic_baseline_person_pin_24" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="228dp"
+        android:text="LOGOUT" />
+
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="272dp"
+        android:text="MY PROFILE" />
+
+    <TextView
+        android:id="@+id/tvMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toEndOf="@+id/ivProfile"
+        android:text="MY MESSAGES" />
+
+    <TextView
+        android:id="@+id/tvMyReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toEndOf="@+id/ivProfile"
+        android:text="MY REVIEWS" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
+
+</RelativeLayout>
