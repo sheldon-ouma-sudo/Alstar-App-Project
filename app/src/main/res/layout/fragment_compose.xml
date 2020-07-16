@@ -1,0 +1,76 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="Fragments.ComposeFragment">
+
+    <TextView
+        android:id="@+id/tvNewReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="64dp"
+        android:text="ADD A REVIEW" />
+
+    <EditText
+        android:id="@+id/etProductType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:inputType="textPersonName"
+        android:text="ENTER THE TYPE OF PRODUCT" />
+
+    <EditText
+        android:id="@+id/etItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginStart="50dp"
+        android:text="ENTER THE NAME OF THE ITEM" />
+
+    <EditText
+        android:id="@+id/etBrandName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginStart="50dp"
+        android:text="ENTER THE NAME OF THE BRAND" />
+
+    <EditText
+        android:id="@+id/etPurchaseStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginStart="50dp"
+        android:text="ENTER THE STORE OF PURCHASE" />
+
+
+    <EditText
+        android:id="@+id/etPurchaseMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginStart="50dp"
+        android:text="ENTER THE MODE OF PURCHASE" />
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginStart="50dp"
+        android:text="ENTER THE PRICE" />
+    <Button
+        android:id="@+id/btnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="50dp"
+        android:text="NEXT"/>
+
+
+</LinearLayout>

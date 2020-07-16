@@ -1,0 +1,51 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Fragments.RateReviewFragment">
+
+    <TextView
+        android:id="@+id/tvCaptureImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="80dp"
+        android:text="TAKE THE PICTURE OF ITEM UNDER REVIEW" />
+
+
+    <ImageView
+        android:id="@+id/ivItemPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="200dp"
+        tools:src="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/tvRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="400dp"
+        android:text="RATE YOUR ITEM" />
+
+    <RatingBar
+        android:id="@+id/rbItemReview"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="80dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginStart="150dp"
+        android:text="NEXT" />
+
+
+</FrameLayout>
