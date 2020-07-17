@@ -14,12 +14,12 @@ import android.widget.TextView;
 import com.example.alstarapp.R;
 
 
-public class ProfileFragment extends Fragment {
-    private ImageView ivProfile;
-    private TextView tvProfile;
-    private TextView tvMessages;
-    private TextView tvMyReviews;
-    private Button btnLogout;
+    public class ProfileFragment extends Fragment {
+        private ImageView ivProfile;
+        private TextView tvProfile;
+        private TextView tvMessages;
+        private TextView tvMyReviews;
+        private Button btnLogout;
 
 
 
@@ -41,6 +41,13 @@ public class ProfileFragment extends Fragment {
         tvMessages = view.findViewById(R.id.tvMessages);
         tvMyReviews = view.findViewById(R.id.tvMyReviews);
         btnLogout = view.findViewById(R.id.btnLogout);
+
+
+
+
+
+
+
     }
 
 

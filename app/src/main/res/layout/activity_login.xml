@@ -11,32 +11,38 @@
         android:id="@+id/etUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="140dp"
-        android:layout_marginEnd="97dp"
+        android:layout_marginEnd="80dp"
         android:ems="10"
-        android:inputType="textPersonName"
-      android:hint="ENTER USERNAME" />
+        android:hint="ENTER USERNAME"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/etLoginPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="228dp"
-        android:layout_marginEnd="81dp"
+        android:layout_marginEnd="80dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="ENTER PASSWORD" />
+        android:hint="ENTER PASSWORD"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
+        android:layout_marginTop="400dp"
         android:layout_marginEnd="142dp"
         android:text="LOGIN" />
 </RelativeLayout>

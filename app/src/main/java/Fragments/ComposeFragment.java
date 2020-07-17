@@ -24,7 +24,7 @@ public class ComposeFragment extends Fragment {
     private EditText etPurchaseStore;
     private EditText etPurchaseMode;
     private EditText etPrice;
-    private EditText btnnext;
+    private Button btnext;
 
 
 
@@ -50,24 +50,20 @@ public class ComposeFragment extends Fragment {
         etItemName = view.findViewById(R.id. etItemName);
         etPurchaseStore = view.findViewById(R.id. etPurchaseStore );
         etPrice = view.findViewById(R.id.etPrice);
-        btnnext= view.findViewById(R.id.btnext);
+        btnext= view.findViewById(R.id.btnext);
 
-        btnnext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            Fragment fragment = new RateReviewFragment();
 
             }
          //fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
            // return true;
 
-        });
+        }
 
 
-    }
 
 
-    }
+
+
 
 
 

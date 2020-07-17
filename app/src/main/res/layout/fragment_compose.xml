@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:inputType="textPersonName"
-        android:text="ENTER THE TYPE OF PRODUCT" />
+        android:hint="ENTER THE TYPE OF PRODUCT" />
 
     <EditText
         android:id="@+id/etItemName"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:layout_marginStart="50dp"
-        android:text="ENTER THE NAME OF THE ITEM" />
+        android:hint="ENTER THE NAME OF THE ITEM" />
 
     <EditText
         android:id="@+id/etBrandName"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:layout_marginStart="50dp"
-        android:text="ENTER THE NAME OF THE BRAND" />
+        android:hint="ENTER THE NAME OF THE BRAND" />
 
     <EditText
         android:id="@+id/etPurchaseStore"
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:layout_marginStart="50dp"
-        android:text="ENTER THE STORE OF PURCHASE" />
+        android:hint="ENTER THE STORE OF PURCHASE" />
 
 
     <EditText
@@ -55,15 +55,16 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:layout_marginStart="50dp"
-        android:text="ENTER THE MODE OF PURCHASE" />
+        android:hint="ENTER THE MODE OF PURCHASE" />
 
     <EditText
         android:id="@+id/etPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:layout_marginStart="50dp"
-        android:text="ENTER THE PRICE" />
+        android:ems="15"
+        android:hint="ENTER THE PRICE" />
     <Button
         android:id="@+id/btnext"
         android:layout_width="wrap_content"
