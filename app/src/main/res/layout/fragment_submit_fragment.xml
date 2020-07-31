@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E5A8F"
     tools:context="Fragments.SubmitFragment">
 
 
@@ -11,25 +12,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="130dp"
+        android:layout_marginStart="150dp"
         android:text="REVIEW PREVIEW" />
-
 
 
     <Button
         android:id="@+id/btnEditReview"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="450dp"
-        android:layout_marginStart="150dp"
-        android:text="SUBMIT REVIEW" />
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/custom"
+        android:textColor="#FFFF"
+        android:text="EDIT REVIEW" />
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="400dp"
-        android:text="EDIT REVIEW" />
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="120dp"
+        android:background="@drawable/custom"
+        android:textColor="#FFFF"
+        android:text="SUBMIT REVIEW" />
 
 </FrameLayout>

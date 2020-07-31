@@ -10,9 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SearchView;
 
 import com.example.alstarapp.R;
 import com.example.alstarapp.Review;
@@ -25,17 +22,15 @@ import com.parse.ParseUser;
 import java.util.ArrayList;
 import java.util.List;
 
+public class MyReviewFragment extends Fragment {
 
-public class SearchFragment extends Fragment {
-    private static final String TAG = "SearchFragment";
-    private SearchView svSearch;
-    RecyclerView rvReviews;
+    private static final String TAG =" MyReviewFragment" ;
+    private RecyclerView rvMyReview;
+    protected ReviewsAdapter myAdapter;
+    protected List<Review> allMyReviews;
 
-    //let's create the array list and its adapter
-    ArrayList<Review> reviewArrayList;
-    ReviewsAdapter reviewAdapter;
 
-    public SearchFragment() {
+    public MyReviewFragment() {
         // Required empty public constructor
     }
 
@@ -44,45 +39,47 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false);
+        return inflater.inflate(R.layout.fragment_my_review, container, false);
     }
 
+    // This event is triggered soon after onCreateView().
+    // Any view setup should occur here.  E.g., view lookups and attaching view listeners.
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
-        svSearch = view.findViewById(R.id.svSearch);
-        rvReviews = view.findViewById(R.id.rvReviews);
-        //let's get all the reviews from the backend and add them to the reviewArrayList
-        //using api presented by the parse in order get data out of database
-        reviewArrayList = new ArrayList<Review>();
 
-        reviewAdapter = new ReviewsAdapter(getContext(), reviewArrayList);
-        rvReviews.setAdapter(reviewAdapter);
-        rvReviews.setLayoutManager(new LinearLayoutManager(getContext()));
+        rvMyReview = view.findViewById(R.id.rvMyReview);
+        //let's do step number 2 and we will pass in the two variables the context and a list of reviews
+        //let's first initialize the list to ensure it is an empty list
+        allMyReviews = new ArrayList<>();
+        myAdapter = new ReviewsAdapter(getContext(),  allMyReviews);
 
-        svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                queryReview(s);
-                return false;
-            }
+//set the adapter on the recycler view
+        rvMyReview.setAdapter(myAdapter);
+        //  set out the layout manager on the recycler view
+        rvMyReview.setLayoutManager(new LinearLayoutManager(getContext()));
 
-            @Override
-            public boolean onQueryTextChange(String s) {
-                return false;
-            }
-        });
+        /*
+    Steps to use the recycler view:
+    1. Create the layout for one row of the list
+     2. create the adapter
+     3. create the data source
+     4. set the adapter on the recycler view
+
+     5. set out the layout manager on the recycler view
+     */
+        queryReview();
 
     }
-
-
-    private void queryReview(String searchQuery) {
+    //using api presented by the parse in order get data out of database
+    protected void queryReview () {
         // Specify which class to query
         ParseQuery<Review> query = ParseQuery.getQuery(Review.class);
         query.include(Review.KEY_REVIEWER);
-        query.whereContains(Review.KEY_ITEM_NAME, searchQuery);
+        query.whereEqualTo(Review.KEY_REVIEWER, ParseUser.getCurrentUser());
         //retrieve all the reviews in background
+        query.addAscendingOrder(Review.KEY_RATING);
         query.findInBackground(new FindCallback<Review>() {
             @Override
             public void done(List<Review> reviewList, ParseException e) {
@@ -90,19 +87,21 @@ public class SearchFragment extends Fragment {
                 if (e != null) {
                     Log.e(TAG, "Issue with getting reviews");
                     return;
+
                 }
+                //iterate through the reviews and log something
                 for (Review review : reviewList) {
                     Log.i(TAG, "review" + review.getStoreName() + "username:" + review.getReviewer());
                 }
 
-                reviewArrayList.addAll(reviewList);
-                reviewAdapter.notifyDataSetChanged();
+                allMyReviews.addAll(reviewList);
+                myAdapter.notifyDataSetChanged();
             }
 
         });
+
     }
 
 
-
-
 }
+

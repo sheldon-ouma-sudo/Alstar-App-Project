@@ -6,10 +6,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E5A8F"
     tools:context=".SignUpActivity">
 
     <EditText
-        android:id="@+id/etPhoneEmail"
+        android:id="@+id/etUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -17,7 +18,7 @@
         android:layout_marginStart="84dp"
         android:layout_marginTop="87dp"
         android:ems="10"
-        android:hint="ENTER PHONE OR EMAIL"
+        android:hint="ENTER USERNAME"
         android:inputType="textPersonName" />
 
     <EditText
@@ -30,15 +31,20 @@
         android:layout_marginStart="96dp"
         android:layout_marginTop="186dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:hint="ENTER PASSWORD" />
 
     <Button
         android:id="@+id/btnSignUp"
-        android:layout_width="wrap_content"
+        android:layout_width="189dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="276dp"
+        android:background="@drawable/custom"
+        android:textColor="#FFFF"
         android:text="SIGN IN" />
+
+
+
 </RelativeLayout>

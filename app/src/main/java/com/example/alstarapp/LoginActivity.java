@@ -35,8 +35,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
 
 //This method Invokes an action when the user clicks on the button when the user clicks on it
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-@Override
+btnLogin.setOnClickListener(new View.OnClickListener() {
+        @Override
 public void onClick(View view) {
         Log.i(TAG, "onClick login button");
         String username = etUsername.getText().toString();

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/ivMyItemPic"
+        android:layout_width="194dp"
+        android:layout_height="142dp"
+        android:layout_below="@+id/rbMyratingBar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        tools:src="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/tvMyItemName"
+        android:layout_width="96dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="80dp"
+
+        android:text="Facemask" />
+
+    <TextView
+        android:id="@+id/tvMyItemBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="114dp"
+        android:text="Ganier" />
+
+    <TextView
+        android:id="@+id/tvMyPrice"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="200dp"
+        android:text="$15" />
+
+    <TextView
+        android:id="@+id/tvMyStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="142dp"
+        android:text="Amazon" />
+
+    <RatingBar
+        android:id="@+id/rbMyratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+
+
+    <TextView
+        android:id="@+id/tvMyDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivMyItemPic"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:text="I paid extra amount of money for fast shipping the delivery was still late" />
+
+    <TextView
+        android:id="@+id/tvMyPurchaseMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMyStore"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="10dp"
+        android:text="online" />
+
+
+</RelativeLayout>

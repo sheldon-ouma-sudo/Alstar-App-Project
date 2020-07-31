@@ -3,6 +3,7 @@ package Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,9 +25,6 @@ public class SubmitFragment extends Fragment {
     }
 
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -42,5 +40,15 @@ public class SubmitFragment extends Fragment {
         btnEditReview = view.findViewById(R.id.btnEditReview);
         btnSubmitReview = view.findViewById(R.id.btnSubmit);
 
+        btnSubmitReview.setOnClickListener(new View.OnClickListener() {
+            FragmentManager fragmentManager= getActivity().getSupportFragmentManager();
+
+            @Override
+
+            public void onClick(View view) {
+                fragmentManager.beginTransaction().replace(R.id.flContainer, new SubmitNavigationFragment()).commit();
+
+            }
+        });
     }
 }

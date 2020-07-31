@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E5A8F"
     tools:context=".LoginActivity">
 
     <EditText
@@ -37,12 +38,14 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
         android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="142dp"
-        android:text="LOGIN" />
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="404dp"
+        android:layout_marginEnd="98dp"
+        android:background="@drawable/custom"
+        android:textColor="#FFFF"
+        android:text="LOGIN"/>
 </RelativeLayout>

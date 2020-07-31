@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="#1E5A8F"
     tools:context="Fragments.HomeScreenFragment">
 
 
@@ -14,8 +15,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="153dp"
-        android:layout_marginTop="78dp"
-        android:text="WELCOME" />
+        android:layout_marginTop="29dp"
+        android:text="WELCOME HOME"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#fff" />
 
     <TextView
         android:id="@+id/tvTrends"
@@ -23,8 +26,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="130dp"
-        android:text="TRENDING REVIEWS" />
+        android:layout_marginTop="84dp"
+        android:text="TRENDING REVIEWS"
+        android:textColor="#fff" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTrendingReview"
+        android:layout_width="372dp"
+        android:layout_height="548dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginBottom="34dp" />
 
 
 </RelativeLayout>

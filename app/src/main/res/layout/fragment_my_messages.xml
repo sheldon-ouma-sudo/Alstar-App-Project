@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1E5A8F"
-    tools:context="Fragments.SearchResultsFragment">
+    tools:context="Fragments.MyMessagesFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

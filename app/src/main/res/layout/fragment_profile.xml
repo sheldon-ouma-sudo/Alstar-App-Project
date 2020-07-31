@@ -1,22 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E5A8F"
     tools:context="Fragments.ProfileFragment">
 
     <ImageView
         android:id="@+id/ivProfile"
-        android:layout_width="176dp"
-        android:layout_height="165dp"
+        android:layout_width="183dp"
+        android:layout_height="217dp"
         android:layout_above="@+id/btnLogout"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="71dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="50dp"
         app:srcCompat="@drawable/ic_baseline_person_pin_24" />
-
 
 
     <Button
@@ -25,11 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="250dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="228dp"
-        android:text="LOGOUT" />
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="345dp"
+        android:background="@drawable/custom"
+        android:text="LOGOUT"
+        android:textColor="#FFFF" />
 
     <TextView
         android:id="@+id/tvProfile"
@@ -40,6 +41,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="272dp"
+        android:textColor="#fff"
         android:text="MY PROFILE" />
 
     <TextView
@@ -47,25 +49,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="50dp"
+
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="87dp"
+
         android:layout_toEndOf="@+id/ivProfile"
-        android:text="MY MESSAGES" />
+        android:text="MY MESSAGES"
+        android:textColor="#FFF" />
 
     <TextView
         android:id="@+id/tvMyReviews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="165dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="44dp"
+
         android:layout_toEndOf="@+id/ivProfile"
-        android:text="MY REVIEWS" />
+        android:text="MY REVIEWS"
+        android:textColor="#FFF" />
 
 
-
-</FrameLayout>
+</RelativeLayout>

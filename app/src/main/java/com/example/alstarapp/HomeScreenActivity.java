@@ -13,14 +13,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import Fragments.ComposeFragment;
 import Fragments.HomeScreenFragment;
 import Fragments.ProfileFragment;
-import Fragments.SearchHomeFragment;
+import Fragments.SearchFragment;
 
 public class HomeScreenActivity extends AppCompatActivity {
+    public static final String TAG = "Retrieving reviews";
     //Declare variable to enable connection to the activitiy xml
     final FragmentManager fragmentManager = getSupportFragmentManager();
 
     private BottomNavigationView bottomNavigation;
-
+    public Review review = new Review();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,7 @@ public class HomeScreenActivity extends AppCompatActivity {
                         break;
                     case R.id.action_search:
                         // we navigate to the search screen
-                      fragment = new SearchHomeFragment();
+                      fragment = new SearchFragment();
                       break;
                     case R.id.action_profile:
                         // we navigate to the profile screen
@@ -60,7 +61,16 @@ public class HomeScreenActivity extends AppCompatActivity {
         bottomNavigation.setSelectedItemId(R.id.action_home);
     }
 
-    }
+}
+
+
+
+
+
+
+
+
+
 
 
 

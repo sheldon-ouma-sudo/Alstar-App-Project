@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E5A8F"
     tools:context="Fragments.CustomerExperienceFragment">
 
     <TextView
@@ -9,22 +10,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="100dp"
+        android:textColor="#FFF"
         android:text="RATE YOUR CUSTOMER EXPIRIENCE" />
 
-    <TextView
-        android:id="@+id/tvConcern"
+    <RatingBar
+        android:id="@+id/rbItemReview"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="100dp"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:id="@+id/etConcern"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="250dp"
         android:layout_marginStart="100dp"
-        android:text="ANY OTHER CONCERNS" />
+        android:textColorHint="#FFF"
+        android:hint="ANY OTHER CONCERNS" />
 
     <Button
         android:id="@+id/btnFinish"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="380dp"
+        android:background="@drawable/custom"
+        android:textColor="#FFFF"
         android:text="FINISH" />
 </FrameLayout>

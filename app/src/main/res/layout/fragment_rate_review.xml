@@ -1,51 +1,63 @@
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E5A8F"
     tools:context="Fragments.RateReviewFragment">
+
 
     <TextView
         android:id="@+id/tvCaptureImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
         android:text="TAKE THE PICTURE OF ITEM UNDER REVIEW" />
 
 
     <ImageView
         android:id="@+id/ivItemPicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="177dp"
+        android:layout_height="139dp"
+        android:layout_below="@+id/tvCaptureImage"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="50dp"
         tools:src="@tools:sample/avatars" />
-
 
     <TextView
         android:id="@+id/tvRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="400dp"
+        android:layout_below="@+id/ivItemPicture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="52dp"
         android:text="RATE YOUR ITEM" />
 
     <RatingBar
         android:id="@+id/rbItemReview"
         android:layout_width="wrap_content"
-        android:layout_marginTop="450dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRate"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="80dp"
-        android:layout_height="wrap_content" />
+        android:layout_marginTop="9dp" />
 
     <Button
         android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="520dp"
+        android:layout_width="136dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/rbItemReview"
+
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="150dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/custom"
+        android:textColor="#FFFF"
         android:text="NEXT" />
 
 
-</FrameLayout>
+</RelativeLayout>

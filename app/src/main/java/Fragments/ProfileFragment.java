@@ -1,8 +1,10 @@
 package Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +13,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.alstarapp.LoginActivity;
 import com.example.alstarapp.R;
+import com.parse.ParseUser;
 
 
-    public class ProfileFragment extends Fragment {
-        private ImageView ivProfile;
+public class ProfileFragment extends Fragment {
+
+    private ImageView ivProfile;
         private TextView tvProfile;
         private TextView tvMessages;
         private TextView tvMyReviews;
@@ -43,17 +48,57 @@ import com.example.alstarapp.R;
         btnLogout = view.findViewById(R.id.btnLogout);
 
 
+     //clicking on my reviews section takes you to the reviews section
+        tvMyReviews.setOnClickListener(new View.OnClickListener() {
+             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            @Override
+            public void onClick(View view) {
 
 
+                fragmentManager.beginTransaction().replace(R.id.flContainer, new MyReviewFragment()).commit();
+            }
+        });
+
+
+
+
+
+
+
+        //clicking on the messages takes you to the messages section
+     tvMessages.setOnClickListener(new View.OnClickListener() {
+
+         @Override
+         public void onClick(View view) {
+
+         }
+
+     });
+        //fragmentManager.beginTransaction().replace(R.id.flContainer, new MyMessagesFragment()).commit();
+
+
+
+        //invoke an action when the user clicks on the logout button
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 onLogoutAction();
+            }
+        });
 
 
 
     }
 
+    private void onLogoutAction() {
+        ParseUser.logOutInBackground();
+        Intent i = new Intent(getContext(), LoginActivity.class);
+        startActivity(i);
+    }
 
 
 }
-
+//making parse request
 
 
 
