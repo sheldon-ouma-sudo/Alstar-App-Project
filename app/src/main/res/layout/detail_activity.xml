@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:clickable="false">
+    android:clickable="true">
 
 
     <ImageView
@@ -107,19 +107,20 @@
 
     <Button
         android:id="@+id/btnPurchase"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
         android:layout_alignTop="@+id/tvDescription"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="2dp"
         android:layout_marginTop="48dp"
-        android:text="PURCHASE" />
+        android:background="@drawable/custom"
+        android:text="Purchase" />
 
     <Button
         android:id="@+id/btnMessage"
         android:layout_width="142dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_below="@+id/ratingBar"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -127,6 +128,7 @@
         android:layout_marginTop="179dp"
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="5dp"
+        android:background="@drawable/custom"
         android:text="MESSAGE" />
 
 </RelativeLayout>
