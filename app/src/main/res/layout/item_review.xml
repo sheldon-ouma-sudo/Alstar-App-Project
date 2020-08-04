@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
 
     <ImageView
@@ -24,7 +23,6 @@ android:layout_height="wrap_content">
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="161dp"
-
         android:layout_marginTop="62dp"
         android:text="Facemask" />
 
@@ -35,19 +33,19 @@ android:layout_height="wrap_content">
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginStart="282dp"
+        android:layout_marginTop="63dp"
         android:text="Ganier" />
 
     <TextView
         android:id="@+id/tvPrice"
         android:layout_width="49dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="325dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="63dp"
+        android:layout_toEndOf="@+id/tvItemBrand"
         android:text="$15" />
 
     <TextView
@@ -63,14 +61,17 @@ android:layout_height="wrap_content">
 
     <RatingBar
         android:id="@+id/rbratingBar"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="156dp"
-        android:layout_marginTop="-2dp"
-        android:layout_marginEnd="15dp" />
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="15dp"
+        android:clickable="false"
+        android:progressTint="#5C0931" />
 
     <TextView
         android:id="@+id/tvDescription"

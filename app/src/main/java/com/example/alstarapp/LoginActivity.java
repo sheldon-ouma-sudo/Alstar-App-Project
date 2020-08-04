@@ -57,14 +57,14 @@ private void loginUser(String username, String password) {
 public void done(ParseUser user, ParseException e) {
         //let us check if the parse exception is not null
         if(e != null){  //meaning the login has was unsuceessful
-        Log.e(TAG, "Issues with the login", e);
+
         return;
         }
         // otherwise the login was succesful and now we have to navigate to the Homescreen Activity
         //we do so by creating our own method that will help with the navigation, goHomescreenActivity
         goHomescreenActivity();
         //Let's notify the user they have successfully logged in
-        Log.i(TAG,"logging in ");
+
         Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
 
 

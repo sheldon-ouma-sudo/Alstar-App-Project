@@ -63,7 +63,17 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ViewHold
     public int getItemCount() {
         return reviews.size();
     }
+    //clear all the elements of the recycler
+    public void clear() {
+        reviews.clear();
+        notifyDataSetChanged();
+    }
 
+    // Add a list of reviews
+    public void addAll(List<Review> reviewList) {
+        reviews.addAll(reviewList);
+        notifyDataSetChanged();
+    }
     class ViewHolder extends RecyclerView.ViewHolder {
         // so we reference inside the viewholder a step from the bind method
         // private ImageView ivProfile;

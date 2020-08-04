@@ -21,7 +21,7 @@ public class HomePageActivity extends AppCompatActivity {
             gotoLoginActivity();
         }
 
-
+//referencing the activity items
       btnLOGIN=findViewById(R.id.btnLOGIN);
       btnSIGNUP= findViewById(R.id.btSIGNUP);
 
@@ -40,13 +40,13 @@ public class HomePageActivity extends AppCompatActivity {
       });
 
     }
-
+//navigation to the sigup activity
     private void goSignUpAcitivity() {
         Intent intent = new Intent(this,SignUpActivity.class);
         startActivity(intent);
 
     }
-
+    //navigation to the login activity
     private void gotoLoginActivity() {
         Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1E5A8F"
+    android:background="#fff"
     tools:context="Fragments.ComposeFragment">
 
     <TextView
@@ -13,75 +13,92 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="64dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="60dp"
         android:text="ADD A REVIEW" />
 
     <EditText
         android:id="@+id/etProductType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter the product type"
         android:inputType="textPersonName"
-        android:textColorHint="#FFF"
-        android:hint="ENTER THE TYPE OF PRODUCT" />
+        android:ems="10"
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/etItemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:hint="Enter the name of the item"
         android:inputType="textPersonName"
-        android:layout_marginStart="50dp"
-        android:textColorHint="#FFF"
-        android:hint="ENTER THE NAME OF THE ITEM" />
+        android:ems="10"
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/etBrandName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:hint="Enter the item brand"
         android:inputType="textPersonName"
-        android:layout_marginStart="50dp"
-        android:textColorHint="#FFF"
-        android:hint="ENTER THE NAME OF THE BRAND" />
-
-    <EditText
-        android:id="@+id/etPurchaseStore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_marginStart="50dp"
-        android:textColorHint="#FFF"
-        android:hint="ENTER THE STORE OF PURCHASE" />
+        android:ems="10"
+        android:textSize="14sp" />
 
 
     <EditText
         android:id="@+id/etPurchaseMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:hint="Enter the purchase mode"
         android:inputType="textPersonName"
-        android:layout_marginStart="50dp"
-        android:textColorHint="#FFF"
-        android:hint="ENTER THE MODE OF PURCHASE" />
+        android:ems="10"
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/etPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:ems="10"
+        android:hint="Enter the price"
         android:inputType="numberDecimal"
-        android:layout_marginStart="50dp"
-        android:ems="15"
-        android:textColorHint="#FFF"
-        android:hint="ENTER THE PRICE" />
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/btnPurchaseStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textPersonName"
+        android:text="Store Name"
+        android:textSize="14sp"
+        android:textColorHint="#FFF" />
+
+    <TextView
+        android:id="@+id/tvChosenStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="10dp"
+        android:text="Not Chosen"/>
+
+
     <Button
         android:id="@+id/btnext"
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="46dp"
         android:background="@drawable/custom"
-        android:textColor="#FFFF"
-        android:text="NEXT"/>
+        android:text="NEXT"
+        android:textColor="#FFFF" />
 
 
 </LinearLayout>

@@ -4,10 +4,13 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#1E5A8F"
+
     tools:context="Fragments.HomeScreenFragment">
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
@@ -16,31 +19,45 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="153dp"
         android:layout_marginTop="29dp"
-        android:text="WELCOME HOME"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#fff" />
+        android:text="Welcome Home"
+        android:textColor="#fff"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/tvTrends"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="153dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
-        android:text="TRENDING REVIEWS"
-        android:textColor="#fff" />
+        android:layout_marginTop="20dp"
+        android:text="Trending Reviews"
+        android:textColor="#fff"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+</LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTrendingReview"
-        android:layout_width="372dp"
-        android:layout_height="548dp"
-        android:layout_alignParentStart="true"
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="149dp"
-        android:layout_marginBottom="34dp" />
+        android:layout_marginTop="91dp"
+        android:background="#fff">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTrendingReview"
+            android:layout_width="372dp"
+            android:layout_height="548dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="149dp"
+            android:layout_marginBottom="34dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

@@ -97,8 +97,7 @@ public class RateReviewFragment extends Fragment {
                 savePhoto();
                 saveRating(prodcutReview);
                 fragmentManager.beginTransaction().replace(R.id.flContainer, new CustomerExperienceFragment()).commit();
-
-
+                
             }
                // ParseFile image =  ivItemPicture.getPars;
 

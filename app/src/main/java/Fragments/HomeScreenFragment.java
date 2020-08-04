@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.alstarapp.QuickSort;
 import com.example.alstarapp.R;
 import com.example.alstarapp.Review;
 import com.example.alstarapp.ReviewsAdapter;
@@ -21,6 +23,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -32,6 +35,7 @@ public class HomeScreenFragment extends Fragment {
     protected RecyclerView rvTrendingReviews;
     protected ReviewsAdapter adapter;
     protected List<Review> allReviews;
+    SwipeRefreshLayout swipeContainer;
 
 
     public HomeScreenFragment() {
@@ -58,10 +62,26 @@ public class HomeScreenFragment extends Fragment {
         //let's do step number 2 and we will pass in the two variables the context and a list of reviews
         //let's first initialize the list to ensure it is an empty list
         allReviews = new ArrayList<>();
-        adapter = new ReviewsAdapter(getContext(),allReviews);
+        adapter = new ReviewsAdapter(getContext(), allReviews);
+        swipeContainer = view.findViewById(R.id.swipeContainer);
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // our code to refresh the list here.
+                // Make sure our call swipeContainer.setRefreshing(false)
+                // once the network request has completed successfully.
+                queryReview();
+            }
+        });
+
+
 
 //set the adapter on the recycler view
-        rvTrendingReviews.setAdapter(adapter);
+  rvTrendingReviews.setAdapter(adapter);
   //  set out the layout manager on the recycler view
   rvTrendingReviews.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -83,7 +103,7 @@ public class HomeScreenFragment extends Fragment {
             ParseQuery<Review> query = ParseQuery.getQuery(Review.class);
             query.include(Review.KEY_REVIEWER);
             //retrieve all the reviews in background
-            query.addAscendingOrder(Review.KEY_RATING);
+            //query.addDescendingOrder(Review.KEY_RATING);
             query.findInBackground(new FindCallback<Review>() {
                 @Override
                 public void done(List<Review> reviewList, ParseException e) {
@@ -94,12 +114,22 @@ public class HomeScreenFragment extends Fragment {
 
                     }
                     //iterate through the reviews and log something
+                    List<Review> sortedList = QuickSort.QuickSort(reviewList, reviewList.size());
+                   Collections.reverse(sortedList);
+                    System.out.println("sorted are");
+                    System.out.println(sortedList.toString());
                     for (Review review : reviewList) {
                         Log.i(TAG, "review" + review.getStoreName() + "username:" + review.getReviewer());
                     }
+                    //let's clear everything from the adapter first
+                    adapter.clear();
 
-                     allReviews.addAll(reviewList);
-                    adapter.notifyDataSetChanged();
+                    //let us instead combine the two together with the help of the helper function
+                      adapter.addAll(sortedList);
+                     //allReviews.addAll(reviewList);
+                    //adapter.notifyDataSetChanged();
+                    //after finishing refreshing we want to signal the refreshing is done
+                  swipeContainer.setRefreshing(false);
                 }
 
             });

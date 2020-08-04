@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1E5A8F"
+    android:background="#fff"
     tools:context="Fragments.ProfileFragment">
 
     <ImageView
@@ -22,15 +22,15 @@
 
     <Button
         android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="70dp"
         android:layout_marginBottom="345dp"
         android:background="@drawable/custom"
-        android:text="LOGOUT"
-        android:textColor="#FFFF" />
+        android:textColor="#fff"
+        android:text="LOGOUT" />
 
     <TextView
         android:id="@+id/tvProfile"
@@ -41,21 +41,17 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="272dp"
-        android:textColor="#fff"
-        android:text="MY PROFILE" />
+        android:text="My Profile" />
 
     <TextView
         android:id="@+id/tvMessages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-
         android:layout_marginStart="95dp"
         android:layout_marginTop="87dp"
-
         android:layout_toEndOf="@+id/ivProfile"
-        android:text="MY MESSAGES"
-        android:textColor="#FFF" />
+        android:text=" Messages" />
 
     <TextView
         android:id="@+id/tvMyReviews"
@@ -64,10 +60,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="100dp"
         android:layout_marginTop="44dp"
-
         android:layout_toEndOf="@+id/ivProfile"
-        android:text="MY REVIEWS"
-        android:textColor="#FFF" />
+        android:text="My Reviews" />
 
 
 </RelativeLayout>
