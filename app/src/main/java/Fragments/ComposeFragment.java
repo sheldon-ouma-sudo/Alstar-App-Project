@@ -85,6 +85,7 @@ public class ComposeFragment extends Fragment {
         etPrice = view.findViewById(R.id.etPrice);
         btnext = view.findViewById(R.id.btnext);
 
+
         //enable the user choose
         btnPurchaseStore.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,6 +168,8 @@ public class ComposeFragment extends Fragment {
         ((HomeScreenActivity) getActivity()).review.setKeyPurchaseMode(PurchaseMode);
         ((HomeScreenActivity) getActivity()).review.setKeyPrice(price);
         ((HomeScreenActivity) getActivity()).review.setKeyReviewer(currentUser);
+
+
         //whaat does saveInBackground do--prolly saving the review
         ((HomeScreenActivity) getActivity()).review.saveInBackground(new SaveCallback() {
             @Override

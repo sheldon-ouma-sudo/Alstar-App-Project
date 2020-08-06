@@ -5,14 +5,19 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <permission android:name="android.permission.ACCESS_FINE_LOCATION" android:protectionLevel="dangerous"/>
-    <permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:protectionLevel="dangerous"/>
+
+    <permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:protectionLevel="dangerous" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.example.maptest.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".ParseApplication"
@@ -23,7 +28,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".ThirdAnimationActivity"></activity>
+        <activity android:name=".SecondAnimationActivity" />
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".MapActivity" />
         <activity
             android:name=".MessageBoardActivity"
             android:label="@string/title_activity_message_board"
@@ -40,7 +48,7 @@
                 android:resource="@xml/fileprovider" />
         </provider>
 
-        <activity android:name=".HomePageActivity">
+        <activity android:name=".FirstAnimationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

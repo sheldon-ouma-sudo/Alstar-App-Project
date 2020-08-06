@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="120dp"
+        android:layout_marginStart="130dp"
         android:layout_marginTop="60dp"
         android:text="ADD A REVIEW" />
 
@@ -38,16 +38,16 @@
         android:ems="10"
         android:textSize="14sp" />
 
+
     <EditText
         android:id="@+id/etBrandName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
+        android:ems="10"
         android:hint="Enter the item brand"
         android:inputType="textPersonName"
-        android:ems="10"
         android:textSize="14sp" />
-
 
     <EditText
         android:id="@+id/etPurchaseMode"
@@ -72,15 +72,15 @@
 
     <Button
         android:id="@+id/btnPurchaseStore"
-        android:layout_width="200dp"
+        android:layout_width="130dp"
         android:layout_height="30dp"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/custom"
         android:inputType="textPersonName"
         android:text="Store Name"
-        android:background="@drawable/custom"
-        android:textSize="14sp"
-        android:textColorHint="#FFF" />
+        android:textColorHint="#FFF"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tvChosenStore"
@@ -94,9 +94,9 @@
 
     <Button
         android:id="@+id/btnext"
-        android:layout_width="200dp"
+        android:layout_width="100dp"
         android:layout_height="30dp"
-        android:layout_marginStart="120dp"
+        android:layout_marginStart="150dp"
         android:layout_marginTop="46dp"
         android:background="@drawable/custom"
         android:text="NEXT"

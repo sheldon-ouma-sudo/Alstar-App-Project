@@ -1,7 +1,6 @@
 package Fragments;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +67,7 @@ public class SearchFragment extends Fragment {
             public boolean onQueryTextChange(String s) {
                 return false;
             }
+
         });
 
     }
@@ -76,8 +76,10 @@ public class SearchFragment extends Fragment {
     private void queryReview(String searchQuery) {
         // Specify which class to query
         ParseQuery<Review> query = ParseQuery.getQuery(Review.class);
-        query.include(Review.KEY_REVIEWER);
+        //query.include(Review.KEY_REVIEWER);
         query.whereContains(Review.KEY_ITEM_NAME, searchQuery);
+
+
         //retrieve all the reviews in background
         query.findInBackground(new FindCallback<Review>() {
             @Override
@@ -86,6 +88,7 @@ public class SearchFragment extends Fragment {
 
                 reviewArrayList.addAll(reviewList);
                 reviewAdapter.notifyDataSetChanged();
+
             }
 
         });

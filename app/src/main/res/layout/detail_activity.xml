@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#D3D3D3"
     android:clickable="true">
 
 
@@ -26,12 +26,12 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="41dp"
-        android:clickable="false"
+        android:isIndicator="true"
         android:progressTint="#5C0931" />
 
     <TextView
         android:id="@+id/tvProductName"
-        android:layout_width="71dp"
+        android:layout_width="119dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ratingBar"
         android:layout_marginStart="35dp"
@@ -115,6 +115,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/custom"
+        android:textColor="#fff"
         android:text="Purchase" />
 
     <Button
@@ -129,6 +130,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/custom"
+        android:textColor="#fff"
         android:text="MESSAGE" />
 
 </RelativeLayout>

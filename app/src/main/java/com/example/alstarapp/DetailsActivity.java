@@ -64,7 +64,8 @@ public class DetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SEARCH);
-
+//I get the place/shop from backend
+                //API THAT gives the link
                 // Build the intent
                 Uri productStore = Uri.parse("http://www.amazon.com/gp/mas/dl/android?");
                 Intent productStoreIntent = new Intent(Intent.ACTION_VIEW, productStore);
@@ -85,7 +86,7 @@ public class DetailsActivity extends AppCompatActivity {
 
 }
 
-
+//
 
 
 
