@@ -28,13 +28,12 @@ public class DetailsActivity extends AppCompatActivity {
         ImageView ivItemImage = findViewById(R.id.ivItemImage);
         TextView tvUsername = findViewById(R.id.tvUserName);
         TextView tvDescription = findViewById(R.id.tvDescription);
-        RatingBar ratingBar = findViewById(R.id.ratingBar);
+        RatingBar ratingBar = findViewById(R.id.rbratingBar);
         TextView tvProductName = findViewById(R.id.tvProductName);
         TextView tvPurchaseMode = findViewById(R.id.tvPurchaseMode);
         TextView tvStoreName = findViewById(R.id.tvStoreName);
         TextView tvPrice = findViewById(R.id.tvPrice);
         ImageView ivProfileImage = findViewById(R.id.ivProfileImage);
-        TextView tvUserName = findViewById(R.id.tvUserName);
         Button btnPurchase = findViewById(R.id.btnPurchase);
         Button btnMessage = findViewById(R.id.btnMessage);
 

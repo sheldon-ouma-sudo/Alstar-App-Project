@@ -1,21 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="15dp"
+    android:background="#A9A9A9"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:outlineSpotShadowColor="#5C0931"
+    card_view:cardCornerRadius="30dp"
+    card_view:cardElevation="5dp"
     android:layout_height="wrap_content">
 
 
     <ImageView
         android:id="@+id/ivMyItemPic"
-        android:layout_width="151dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
         android:layout_below="@+id/rbMyratingBar"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="50dp"
         android:layout_weight="1"
+        android:textColor="@color/quantum_black_100"
         tools:src="@tools:sample/avatars" />
 
     <TextView
@@ -25,8 +34,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:textColor="#5C0931"
         android:text="Facemask" />
 
     <TextView
@@ -36,21 +46,23 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="297dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="85dp"
+        android:textColor="@color/quantum_black_100"
         android:text="Ganier" />
+
 
     <TextView
         android:id="@+id/tvMyPrice"
-        android:layout_width="89dp"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="214dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/quantum_black_100"
         android:text="$15" />
-
 
     <TextView
         android:id="@+id/tvMyStore"
@@ -60,17 +72,18 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/quantum_black_100"
         android:text="Amazon" />
 
     <RatingBar
         android:id="@+id/rbMyratingBar"
         android:layout_width="wrap_content"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="10dp"
         android:isIndicator="true" />
 
     <TextView
@@ -80,8 +93,9 @@
         android:layout_below="@+id/ivMyItemPic"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="150dp"
+        android:textColor="@color/quantum_black_100"
         android:text="I paid extra amount of money for fast shipping the delivery was still late" />
 
     <TextView
@@ -96,4 +110,4 @@
         android:text="online" />
 
 
-</RelativeLayout>
+</androidx.cardview.widget.CardView>
