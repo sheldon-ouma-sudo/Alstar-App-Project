@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <permission
         android:name="android.permission.ACCESS_FINE_LOCATION"
@@ -33,7 +34,7 @@
         <activity android:name=".HomePageActivity" />
         <activity android:name=".MapActivity" />
         <activity
-            android:name=".MessageBoardActivity"
+            android:name=".ChatActivity"
             android:label="@string/title_activity_message_board"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SignUpActivity" />

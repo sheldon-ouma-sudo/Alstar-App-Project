@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-
+    android:outlineSpotShadowColor="@color/quantum_white_100"
     tools:context="Fragments.HomeScreenFragment">
 
 <LinearLayout

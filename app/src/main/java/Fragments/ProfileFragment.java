@@ -55,14 +55,7 @@ public class ProfileFragment extends Fragment {
             }
         });
         //clicking on the messages takes you to the messages section
-        tvMessages.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-
-            }
-
-        });
 
         //invoke an action when the user clicks on the logout button
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +67,7 @@ public class ProfileFragment extends Fragment {
 
 
     }
+
 
     private void onLogoutAction() {
         ParseUser.logOutInBackground();

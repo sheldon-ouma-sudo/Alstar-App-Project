@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -113,8 +112,9 @@ public class RateReviewFragment extends Fragment {
         // create Intent to take a picture and return control to the calling application
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         // Create a File reference for future access
-        photoFile = getPhotoFileUri(photoFileName);
+        // photoFile = getPhotoFileUri(photoFileName+System.currentTimeMillis() + ".png");
 
+        photoFile = new File(getActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES), "share_image_" + System.currentTimeMillis() + ".png");
         // wrap File object into a content provider
         // required for API >= 24
         // See https://guides.codepath.com/android/Sharing-Content-with-Intents#sharing-files-with-api-24-or-higher
@@ -135,6 +135,8 @@ public class RateReviewFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) {
+            System.out.println("data is: ");
+            System.out.println(data.toString());
             if (resultCode == RESULT_OK) {
                 // by this point we have the camera photo on disk
                 Bitmap takenImage = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
@@ -143,6 +145,7 @@ public class RateReviewFragment extends Fragment {
 
                 ivItemPicture.setImageBitmap(takenImage);
             } else { // Result was a failure
+                System.out.println("got the error code: " + resultCode);
                 Toast.makeText(getContext(), "Picture wasn't taken!", Toast.LENGTH_SHORT).show();
             }
         }
@@ -169,6 +172,3 @@ public class RateReviewFragment extends Fragment {
 
 //give me the most recent review. from the backend
 //change the variable. update the specific value
-
-
-

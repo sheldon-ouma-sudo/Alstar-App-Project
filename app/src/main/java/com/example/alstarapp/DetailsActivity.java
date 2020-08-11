@@ -18,6 +18,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity {
+    private static final String TAG = "DetailActvity";
     Review review;
 
     @Override
@@ -53,9 +54,17 @@ public class DetailsActivity extends AppCompatActivity {
         btnMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Intent i = new Intent(this, MessageBoardActivity.class);
+                // Intent i = new Intent(this, ChatActivity.class);
 
                 //startActivity(i);
+            }
+        });
+
+
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                messageUser();
             }
         });
         // clicked on the purchase button navigates user to purchase store
@@ -81,6 +90,12 @@ public class DetailsActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void messageUser() {
+        Intent intent = new Intent(this, ChatActivity.class);
+        intent.putExtra("reviewer", review);
+        startActivity(intent);
     }
 
 }

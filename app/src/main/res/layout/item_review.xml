@@ -45,7 +45,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="113dp"
+        android:layout_marginTop="125dp"
         android:layout_toEndOf="@+id/tvItemBrand"
         android:text="$15"
         android:textColor="@color/quantum_black_100" />

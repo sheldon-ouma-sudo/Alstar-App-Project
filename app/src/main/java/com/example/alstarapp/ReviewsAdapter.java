@@ -115,7 +115,8 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ViewHold
             tvDescription.setText(review.getKeyDescription());
             //tvProfileName.setText(review.getReviewer().getUsername());//error compelled me to delete the Parse user variable inside the data
             tvItemBrand.setText(review.getKeyBrand());
-            tvPrice.setInputType(review.getPrice());
+            tvPrice.setText("$" + review.getPrice());
+            Log.i(TAG, "THE PRICE IS " + review.getPrice());
             tvPurchaseMode.setText(review.getKeyPurchaseMode());
             tvStore.setText(review.getStoreName());
             rbratingBar.setRating(review.getItemCount());
